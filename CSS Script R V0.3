@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 })
 OrionLib:MakeNotification({
  Name = "CSS Script Revolution V0.5!",
- Content = "New Update!Added Heights and Texture Pack EXE!",
+ Content = "New Update!Added Function Delete All Objects and Texture Pack EXE!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
@@ -2055,66 +2055,6 @@ Tab:AddButton({
  FastBeat:InvokeServer(BeatLevelInst)
  game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game"):Destroy()
  end
-})
-Tab:AddLabel("Unlock Abilities")
-Tab:AddButton({
- Name = "Unlock Peelout! (Only S1,S2,S3)",
- Callback = function()
-		CharaProperties.tbl["Sonic_S2"].CanUsePeelout = true
-		CharaProperties.tbl["Sonic_S1"].CanUsePeelout = true
-		CharaProperties.tbl["Sonic_S3"].CanUsePeelout = true
-	end,
-})
-Tab:AddButton({
- Name = "Unlock Low Height!",
- Callback = function()
-		CharaProperties.tbl["Sonic_S2"].Height = 10
-		CharaProperties.tbl["Sonic_S1"].Height = 10
-		CharaProperties.tbl["Knuckles_S3"].Height = 10
-		CharaProperties.tbl["Tails_S3"].Height = 10
-		CharaProperties.tbl["Dr_Robotnik"].Height = 10
-		CharaProperties.tbl["Sonic_S3"].Height = 10
-		CharaProperties.tbl["Shadow_S3"].Height = 10
-		CharaProperties.tbl["Rouge_S1"].Height = 10
-		CharaProperties.tbl["Super_Sonic"].Height = 10
-		CharaProperties.tbl["Metal_Sonic"].Height = 10
-		CharaProperties.tbl["Sonic_SCD"].Height = 10
-		CharaProperties.tbl["Amy"].Height = 10
-	end,
-})
-Tab:AddButton({
- Name = "Unlock High Height!",
- Callback = function()
-		CharaProperties.tbl["Sonic_S2"].Height = 50
-		CharaProperties.tbl["Sonic_S1"].Height = 50
-		CharaProperties.tbl["Knuckles_S3"].Height = 50
-		CharaProperties.tbl["Tails_S3"].Height = 50
-		CharaProperties.tbl["Dr_Robotnik"].Height = 50
-		CharaProperties.tbl["Sonic_S3"].Height = 50
-		CharaProperties.tbl["Shadow_S3"].Height = 50
-		CharaProperties.tbl["Rouge_S1"].Height = 50
-		CharaProperties.tbl["Super_Sonic"].Height = 50
-		CharaProperties.tbl["Metal_Sonic"].Height = 50
-		CharaProperties.tbl["Sonic_SCD"].Height = 50
-		CharaProperties.tbl["Amy"].Height = 50
-	end,
-})
-Tab:AddButton({
- Name = "Reset Heights!",
- Callback = function()
-		CharaProperties.tbl["Sonic_S2"].Height = 20
-		CharaProperties.tbl["Sonic_S1"].Height = 20
-		CharaProperties.tbl["Knuckles_S3"].Height = 20
-		CharaProperties.tbl["Tails_S3"].Height = 15
-		CharaProperties.tbl["Dr_Robotnik"].Height = 20
-		CharaProperties.tbl["Sonic_S3"].Height = 20
-		CharaProperties.tbl["Shadow_S3"].Height = 20
-		CharaProperties.tbl["Rouge_S1"].Height = 20
-		CharaProperties.tbl["Super_Sonic"].Height = 20
-		CharaProperties.tbl["Metal_Sonic"].Height = 20
-		CharaProperties.tbl["Sonic_SCD"].Height = 20
-		CharaProperties.tbl["Amy"].Height = 18
-	end,
 })
 Tab:AddLabel("To be a character")
 Tab:AddParagraph("How to be a admin Character","To do this, just click on any button and go to ANY level. And you will become the character you clicked on now")
