@@ -1,5 +1,5 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.51", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/main/Astereo%20UI"))()
+local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.55", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local SlotID = 1
 local LevelCreateID = 1
 local antiError = 1
@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 })
 OrionLib:MakeNotification({
  Name = "CSS Script Revolution V0.51!",
- Content = "New Update!Added Movement Window On Androids!",
+ Content = "New Update!Added New UI And More Music!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
@@ -1969,6 +1969,54 @@ Tab:AddButton({
  game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "291053059"
  end 
 })
+Tab:AddLabel("TOREINA")
+Tab:AddButton({
+ Name = "Pulse Fighter!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "298773973"
+ end 
+})
+Tab:AddLabel("OMORI")
+Tab:AddButton({
+ Name = "Three Bar Logos!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "11196728830"
+ end 
+})
+Tab:AddLabel("Secret Base")
+Tab:AddButton({
+ Name = "Tanuki Remix? What",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "324431321"
+ end 
+})
+Tab:AddLabel("Tag Underground")
+Tab:AddButton({
+ Name = "Posseission!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "360710810"
+ end 
+})
+Tab:AddLabel("Tudd")
+Tab:AddButton({
+ Name = "Ruby Rampage Zone!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1557595099"
+ end 
+})
+Tab:AddLabel("Sonic R")
+Tab:AddButton({
+ Name = "Livin' In The City (Radical City)!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "508029551"
+ end 
+})
+Tab:AddButton({
+ Name = "Super Sonic Racing!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "4584143727"
+ end 
+})
 Tab:AddParagraph("Warning! If want more songs here...","If you want more songs here, go to the section (Suggestions)")
 local Tab = Window:MakeTab({
  Name = "OP Functions",
@@ -2111,16 +2159,29 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 Tab:AddButton({
- Name = "Open Dark Dex V3 Secure Bypass",
+ Name = "Open Dark Dex V4 Secure Bypass",
  Callback = function()
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
- end 
-})
-Tab:AddButton({
- Name = "Open Dex Explorer V2",
- Callback = function()
- getgenv().Key = "Bash"
- loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/dex2.0", true))()
+ local decompsrc = game:HttpGet("https://raw.githubusercontent.com/w-a-e/Advanced-Decompiler-V3/main/init.lua", true)
+local function loaddecomp(decomptimeout)
+    local CONSTANTS = [[
+local ENABLED_REMARKS = {
+    NATIVE_REMARK = false,
+    INLINE_REMARK = false
+}
+local DECOMPILER_TIMEOUT = ]] .. decomptimeout .. [[
+    
+local READER_FLOAT_PRECISION = 99
+local SHOW_INSTRUCTION_LINES = false
+local SHOW_REFERENCES = false
+local SHOW_OPERATION_NAMES = false
+local SHOW_MISC_OPERATIONS = false
+local LIST_USED_GLOBALS = false
+local RETURN_ELAPSED_TIME = false
+]]
+    loadstring(string.gsub(decompsrc, ";;CONSTANTS HERE;;", CONSTANTS), "Advanced-Decompiler-V3")()
+end
+loaddecomp(1)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/t1ware/DexV5/main/dex-v2.lua'))()
  end 
 })
 Tab:AddButton({
