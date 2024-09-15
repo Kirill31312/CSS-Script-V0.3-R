@@ -1,0 +1,2985 @@
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/main/Astereo%20UI%20V2"))()
+local Window = OrionLib:MakeWindow({Name = "🎈Classic Sonic Simulator V12 Script Revolution V1🎈", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.lshieldget.Playing = true
+local SlotID = 1
+local LevelCreateID = 1
+local antiError = 1
+local ValuePlayerID = nil
+local BeatLevelInst = 
+ {
+ ["Cmd"] = "Cleared",
+ ["Replay"] =
+ {
+ [1] =
+ {
+ [1] = "falling",
+ [2] = 424,
+ [3] = 416
+ }
+ }
+ }
+local Tab = Window:MakeTab({
+ Name = "Меню",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+OrionLib:MakeNotification({
+ Name = "🎈CSS Script Revolution V1🎈!",
+ Content = "Добавлена смена языка и Настройки!",
+ Image = "rbxassetid://4483345998",
+ Time = 10
+})
+Tab:AddParagraph("Как исправить телепорт в неиспользуемые зоны","Используйте эту функцию только в главном меню!")
+Tab:AddButton({
+ Name = "Телепортироватся в Virtual Reality Zone Act 1!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local A_1 = 
+ {
+ [1] = "Virtual Reality", 
+ [2] = 1, 
+ [3] = 
+ {
+ [1] = 628, 
+ [2] = 462
+ }, 
+ [4] = 3, 
+ [5] = "Virtual Reality"
+ }
+ local A_2 = 2
+ local Event = game:GetService("ReplicatedStorage").Remotes.LoadGame
+ Event:FireServer(A_1, A_2)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetMasterData
+ Event:InvokeServer()
+ game:GetService("Players").LocalPlayer.PlayerGui.MainMenu:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Телепортироватся в Virtual Reality Zone Act 2!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local A_1 = 
+ {
+ [1] = "Virtual Reality", 
+ [2] = 2, 
+ [3] = 
+ {
+ [1] = 628, 
+ [2] = 462
+ }, 
+ [4] = 2, 
+ [5] = "Virtual Reality"
+ }
+ local A_2 = 2
+ local Event = game:GetService("ReplicatedStorage").Remotes.LoadGame
+ Event:FireServer(A_1, A_2)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetMasterData
+ Event:InvokeServer()
+ game:GetService("Players").LocalPlayer.PlayerGui.MainMenu:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Телепортироватся в Chemical Plant Zone!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local A_1 = 
+ {
+ [1] = "Chemical Plant", 
+ [2] = 1, 
+ [3] = 
+ {
+ [1] = 628, 
+ [2] = 462
+ }, 
+ [4] = 2, 
+ [5] = "Chemical Plant"
+ }
+ local A_2 = 3
+ local Event = game:GetService("ReplicatedStorage").Remotes.LoadGame
+ Event:FireServer(A_1, A_2)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetMasterData
+ Event:InvokeServer()
+ game:GetService("Players").LocalPlayer.PlayerGui.MainMenu:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Телепортироватся в Aquatic Ruin Zone!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local A_1 = 
+ {
+ [1] = "Aquatic Ruin", 
+ [2] = 1, 
+ [3] = 
+ {
+ [1] = 628, 
+ [2] = 462
+ }, 
+ [4] = 2, 
+ [5] = "Aquatic Ruin"
+ }
+ local A_2 = 3
+ local Event = game:GetService("ReplicatedStorage").Remotes.LoadGame
+ Event:FireServer(A_1, A_2)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetMasterData
+ Event:InvokeServer()
+ game:GetService("Players").LocalPlayer.PlayerGui.MainMenu:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Телепортироватся в Black Zone (???? Zone)!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local A_1 = 
+ {
+ [1] = "????", 
+ [2] = 1, 
+ [3] = 
+ {
+ [1] = 628, 
+ [2] = 462
+ }, 
+ [4] = 2, 
+ [5] = "????"
+ }
+ local A_2 = 3
+ local Event = game:GetService("ReplicatedStorage").Remotes.LoadGame
+ Event:FireServer(A_1, A_2)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetMasterData
+ Event:InvokeServer()
+ game:GetService("ReplicatedStorage").Objects.Asteron_Bullets.Name = "Asterrn"
+ game:GetService("Players").LocalPlayer.PlayerGui.MainMenu:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Телепортироватся в Sandopolis Zone!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local A_1 = 
+ {
+ [1] = "Sandopolis", 
+ [2] = 1, 
+ [3] = 
+ {
+ [1] = 628, 
+ [2] = 462
+ }, 
+ [4] = 2, 
+ [5] = "Sandopolis"
+ }
+ local A_2 = 3
+ local Event = game:GetService("ReplicatedStorage").Remotes.LoadGame
+ Event:FireServer(A_1, A_2)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetMasterData
+ Event:InvokeServer()
+ game:GetService("Players").LocalPlayer.PlayerGui.MainMenu:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Телепортироватся в Metropolis Zone!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local A_1 = 
+ {
+ [1] = "Metropolis", 
+ [2] = 1, 
+ [3] = 
+ {
+ [1] = 628, 
+ [2] = 462
+ }, 
+ [4] = 2, 
+ [5] = "Metropolis"
+ }
+ local A_2 = 3
+ local Event = game:GetService("ReplicatedStorage").Remotes.LoadGame
+ Event:FireServer(A_1, A_2)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetMasterData
+ Event:InvokeServer()
+ game:GetService("Players").LocalPlayer.PlayerGui.MainMenu:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Телепортироватся в Hydrocity Zone!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local A_1 = 
+ {
+ [1] = "Hydrocity", 
+ [2] = 1, 
+ [3] = 
+ {
+ [1] = 628, 
+ [2] = 462
+ }, 
+ [4] = 2, 
+ [5] = "Hydrocity"
+ }
+ local A_2 = 3
+ local Event = game:GetService("ReplicatedStorage").Remotes.LoadGame
+ Event:FireServer(A_1, A_2)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetMasterData
+ Event:InvokeServer()
+ game:GetService("Players").LocalPlayer.PlayerGui.MainMenu:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Телепортироватся в Ice Cap Zone!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local A_1 = 
+ {
+ [1] = "Ice Cap", 
+ [2] = 1, 
+ [3] = 
+ {
+ [1] = 628, 
+ [2] = 462
+ }, 
+ [4] = 2, 
+ [5] = "Ice Cap"
+ }
+ local A_2 = 3
+ local Event = game:GetService("ReplicatedStorage").Remotes.LoadGame
+ Event:FireServer(A_1, A_2)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetMasterData
+ Event:InvokeServer()
+ game:GetService("Players").LocalPlayer.PlayerGui.MainMenu:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Телепортироватся в Old Test Zone Act 1!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local A_1 = 
+ {
+ [1] = "Test", 
+ [2] = 1, 
+ [3] = 
+ {
+ [1] = 628, 
+ [2] = 462
+ }, 
+ [4] = 2, 
+ [5] = "Test"
+ }
+ local A_2 = 3
+ local Event = game:GetService("ReplicatedStorage").Remotes.LoadGame
+ Event:FireServer(A_1, A_2)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetMasterData
+ Event:InvokeServer()
+ game:GetService("Players").LocalPlayer.PlayerGui.MainMenu:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Телепортироватся в Old Test Zone Act 2!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local A_1 = 
+ {
+ [1] = "Test", 
+ [2] = 2, 
+ [3] = 
+ {
+ [1] = 628, 
+ [2] = 462
+ }, 
+ [4] = 3, 
+ [5] = "Test"
+ }
+ local A_2 = 3
+ local Event = game:GetService("ReplicatedStorage").Remotes.LoadGame
+ Event:FireServer(A_1, A_2)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetMasterData
+ Event:InvokeServer()
+ game:GetService("Players").LocalPlayer.PlayerGui.MainMenu:Destroy()
+ end 
+})
+local Tab = Window:MakeTab({
+ Name = "Игра",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddLabel("Функции")
+Tab:AddToggle({
+ Name = "Light Dash Эффект!",
+ Default = false,
+ Callback = function(ToggleGui)
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ if ToggleGui == true then
+ antiError = 0
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.World.Ghost1.Visible = true
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.World.Ghost2.Visible = true
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.World.Ghost3.Visible = true
+ else
+ if antiError == 0 then
+ antiError = 1
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.World.Ghost1.Visible = false
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.World.Ghost2.Visible = false
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.World.Ghost3.Visible = false
+ end
+ end
+ end 
+ })
+Tab:AddLabel("Игровые GUIS")
+Tab:AddToggle({
+ Name = "S3 Special Stage GUI!",
+ Default = false,
+ Callback = function(ToggleGui2)
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ if ToggleGui2 == true then
+ antiError = 0
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.ParallaxSS3.Visible = true
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.WorldSS3.Visible = true
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.Hud.SS3.Visible = true
+ elseif antiError == 0 then
+ antiError = 1
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.ParallaxSS3.Visible = false
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.WorldSS3.Visible = false
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.Hud.SS3.Visible = false
+ end
+ end 
+})
+Tab:AddToggle({
+ Name = "Показать Хитбоксы Игрока!",
+ Default = false,
+ Callback = function(HitboxChara)
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ if HitboxChara == true then
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.World.Objects[game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value].BackgroundTransparency = 0.5
+ elseif antiError == 0 then
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.World.Objects[game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value].BackgroundTransparency = 1
+ end
+ end
+})
+Tab:AddDropdown({
+ Name = "Увеличение (2-0.5)",
+ Default = "1x",
+ Options = {"2", "1", "0.75", "0.5"},
+ Callback = function(ZoomValueing)
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ if ZoomValueing == "1x" then
+ if antiError == 0 then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 3.5
+ end
+ elseif ZoomValueing == "2" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 2
+ elseif ZoomValueing == "1" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 1
+ elseif ZoomValueing == "0.75" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.75
+ elseif ZoomValueing == "0.5" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.5
+ end
+ end 
+})
+Tab:AddDropdown({
+ Name = "Увеличение (0.25-0.001)",
+ Default = "1x",
+ Options = {"0.25", "0.10", "0.05", "0.001"},
+ Callback = function(ZoomValueing)
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ if ZoomValueing == "1x" then
+ if antiError == 0 then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 3.5
+ end
+ elseif ZoomValueing == "0.25" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.25
+ elseif ZoomValueing == "0.10" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.10
+ elseif ZoomValueing == "0.05" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.05
+ elseif ZoomValueing == "0.001" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.001
+ end
+ end 
+})
+Tab:AddToggle({
+ Name = "Показать объекты которые в дали!",
+ Default = false,
+ Callback = function(HelpingZoom)
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ if HelpingZoom == true then
+ if antiError == 0 then
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game"):FindFirstChild("Backdrop"):FindFirstChild("Main").ClipsDescendants = false
+ end
+ elseif antiError == 0 then
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game"):FindFirstChild("Backdrop"):FindFirstChild("Main").ClipsDescendants = true
+ end
+ end
+})
+Tab:AddToggle({
+ Name = "Press start button!",
+ Default = false,
+ Callback = function(ToggleGui3)
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ if ToggleGui3 == true then
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.Hud.PressStart.Visible = true
+ elseif antiError == 0 then
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.Hud.PressStart.Visible = false
+ end
+ end 
+})
+Tab:AddToggle({
+ Name = "Выключить фон!",
+ Default = false,
+ Callback = function(ToggleGui4)
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ if ToggleGui4 == true then
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.Parallax.Visible = false
+ elseif antiError == 0 then
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.Parallax.Visible = true
+ end
+ end 
+})
+Tab:AddToggle({
+ Name = "Выключить все объекты!",
+ Default = false,
+ Callback = function(ToggleGui5)
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ if ToggleGui5 == true then
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.World:FindFirstChild("Objects").Visible = false
+ elseif antiError == 0 then
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.World:FindFirstChild("Objects").Visible = true
+ end
+ end 
+})
+Tab:AddToggle({
+ Name = "Выключить лаву!",
+ Default = false,
+ Callback = function(IL)
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ if IL == true then
+ game:GetService("ReplicatedStorage").Objects.FakeLava.Name = "Lava"
+ elseif antiError == 0 then
+ game:GetService("ReplicatedStorage").Objects.Lava.Name = "FakeLava"
+ end
+ end 
+})
+Tab:AddButton({
+ Name = "Сбросить уровень!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.Engine.Disabled = true
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.Engine.Disabled = false
+ end 
+})
+Tab:AddButton({
+ Name = "Заморозить бадника Asteron!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ game:GetService("ReplicatedStorage").Objects.Asteron.Tick.Value = math.huge
+ end 
+})
+Tab:AddParagraph("Текстур Паки!")
+Tab:AddButton({
+ Name = "Включить Классический Текстур Пак!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].medal.Playing = true
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S3.Value = 8352336106
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S2.Value = 8352336106
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S1.Value = 8352336106
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_SCD.Value = 8352336106
+ end 
+})
+Tab:AddButton({
+ Name = "Включить Sonic 1 Текстур Пак!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].medal.Playing = true
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S3.Value = 13804826000
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S2.Value = 13804826000
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S1.Value = 13804826000
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_SCD.Value = 13804826000
+ end 
+})
+Tab:AddButton({
+ Name = "Включить Sonic 2 Тектсур Пак!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].medal.Playing = true
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S3.Value = 13804828820
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S2.Value = 13804828820
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S1.Value = 13804828820
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_SCD.Value = 13804828820
+ end 
+})
+Tab:AddButton({
+ Name = "Включить Sonic 3 Текстур Пак!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].medal.Playing = true
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S3.Value = 13804830596
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S2.Value = 13804830596
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S1.Value = 13804830596
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_SCD.Value = 13804830596
+ end 
+})
+Tab:AddButton({
+ Name = "Включить Sonic CD Текстур Пак!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].medal.Playing = true
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S3.Value = 13804832490
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S2.Value = 13804832490
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S1.Value = 13804832490
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_SCD.Value = 13804832490
+ end 
+})
+local Tab = Window:MakeTab({
+ Name = "Мега Функции",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddButton({
+ Name = "Создать Бесконченый Уровень!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local args = {
+    [1] = {
+        [1] = 0,
+        [2] = tonumber(LevelCreateID),
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = 1,
+            [2] = 2,
+            [3] = 3,
+            [4] = 4,
+            [5] = 5,
+            [6] = 6,
+            [7] = 7,
+            [8] = 8,
+            [9] = 9,
+            [10] = 10,
+            [11] = 11,
+            [12] = 12
+        },
+        [14] = 952,
+        [15] = 1,
+        [16] = 0,
+        [17] = 5,
+        [18] = 0,
+        [19] = 160,
+        [20] = 224,
+        [21] = 0,
+        [22] = 2,
+        [23] = 0,
+        [24] = 0,
+        [25] = {
+            [1] = 425,
+            [2] = 528,
+            [3] = 244,
+            [4] = 437,
+            [5] = 1
+        },
+        [26] = 1,
+        [27] = 1,
+        [28] = 0,
+        [29] = 0,
+        [30] = 1,
+        [31] = 255,
+        [32] = 255,
+        [33] = 255,
+        [34] = 255,
+        [35] = 255,
+        [36] = 255,
+        [37] = 255,
+        [38] = 255,
+        [39] = 255,
+        [40] = 1,
+        [41] = 1,
+        [42] = 1,
+        [43] = {
+            [1] = 193
+        },
+        [44] = 0,
+        [45] = 1,
+        [46] = 1,
+        [47] = 1,
+        [48] = 1,
+        [49] = {},
+        [50] = {}
+    },
+    [2] = "save"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+ end 
+})
+Tab:AddParagraph("Добавьте больше игроков на ваши пользовательские уровни!","ВНИМАНИЕ!!! Уровень всегда стирается при использовании этой функции, поэтому будьте осторожны!!!")
+Tab:AddParagraph("Какой ID Игрока мне следует выбрать?","1 - Sonic_S1, 2 - Sonic_S2, 3 - Sonic_S3, 4 - Tails_S3, 5 - Knuckles_S3, 6 - Amy, 7 - Metal_Sonic, 8 - Dr.Robotnik, 9 - Super_Sonic, 10 - Shadow_S3, 11 - Rouge_S1, 12 - Sonic_SCD")
+Tab:AddDropdown({
+ Name = "Выбрать ID Игрока!",
+ Default = "1",
+ Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"},
+ Callback = function(PlayerID)
+ IDPlayer = PlayerID
+ print(PlayerID)
+ end 
+})
+Tab:AddButton({
+ Name = "Добавить одного игрока!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = tonumber(LevelCreateID),
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Добавить двух игроков!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = tonumber(LevelCreateID),
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Добавить три игрока!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = tonumber(LevelCreateID),
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Добавить четыре игрока!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = tonumber(LevelCreateID),
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),         
+            [7] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Добавить пять игроков!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = tonumber(LevelCreateID),
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),
+            [7] = tonumber(IDPlayer),
+            [8] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Добавить шесть игроков!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = tonumber(LevelCreateID),
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),
+            [7] = tonumber(IDPlayer),
+            [8] = tonumber(IDPlayer),
+            [9] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Добавить семь игроков!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = tonumber(LevelCreateID),
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),
+            [7] = tonumber(IDPlayer),
+            [8] = tonumber(IDPlayer),
+            [9] = tonumber(IDPlayer),
+            [10] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Добавить восемь игроков!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = tonumber(LevelCreateID),
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),
+            [7] = tonumber(IDPlayer),
+            [8] = tonumber(IDPlayer),
+            [9] = tonumber(IDPlayer),
+            [10] = tonumber(IDPlayer),
+            [11] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Добавить девять игроков!",
+ Callback = function()
+ game.ReplicatedStorage.LevelSelect.Backdrop.Screen["Level Select Script"].warp:Play()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = tonumber(LevelCreateID),
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),
+            [7] = tonumber(IDPlayer),
+            [8] = tonumber(IDPlayer),
+            [9] = tonumber(IDPlayer),
+            [10] = tonumber(IDPlayer),
+            [11] = tonumber(IDPlayer),
+            [12] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+local Tab = Window:MakeTab({
+ Name = "Создать уровень",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddDropdown({
+ Name = "Выберите слот уровня",
+ Default = "1",
+ Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"},
+ Callback = function(SlotLevelID)
+ SlotID = SlotLevelID
+ print(SlotLevelID)
+ end 
+})
+Tab:AddParagraph("What is ID Levels i should select?","1 - Old Test, 2 - Green Hill, 3 - Marble, 4 - Labyrinth, 5 - Emerald Hill, 6 - Metropolis, 7 - Spring Yard, 8 - Star Light, 9 - New Test")
+Tab:AddDropdown({
+ Name = "Выберите ID уровня",
+ Default = "1",
+ Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9"},
+ Callback = function(LevelID)
+ LevelCreateID = LevelID
+ print(LevelID)
+ end 
+})
+Tab:AddButton({
+ Name = "Создайте уровень!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].medal.Playing = true
+ local CreateLevel = game:GetService("ReplicatedStorage").Remotes.CreateNewLevel
+ CreateLevel:FireServer(tonumber(LevelCreateID), tonumber(SlotID))
+ print(LevelCreateID)
+ print(SlotID)
+ wait(2)
+ game:GetService("Players").LocalPlayer.PlayerGui.ManageLevels:Destroy()
+ end 
+})
+local Tab = Window:MakeTab({
+ Name = "Локальные функции",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddLabel("Звуки")
+Tab:AddButton({
+ Name = "Произвести звук Back!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].bork.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Warp!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].warp.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Illegal!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].buzzer.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Checkpoint!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Sonic Can Super Sonic!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].medal.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Level Select Selecting!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ end
+})
+Tab:AddLabel("Звуки Балди")
+Tab:AddButton({
+ Name = "Произвести звук Oh, Hi!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.baldihi.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Slap Ruler!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.baldislap.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Baldi Jumpscare!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.baldiscare.Playing = true
+ end
+})
+Tab:AddLabel("Звуки Sonic CD")
+Tab:AddButton({
+ Name = "Произвести звук Jump!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.jump2.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Yes!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.ExtraLifeCD.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Drown!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.scd_drown.Playing = true
+ end
+})
+Tab:AddLabel("Звуки Sonic 1")
+Tab:AddButton({
+ Name = "Произвести звук Sonic GAME OVER!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.GameOverS1.Playing = true
+ end
+})
+Tab:AddLabel("Звуки Sonic 3")
+Tab:AddButton({
+ Name = "Включить звук Tails Fly!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.fly.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Остановить звук Tails Fly!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.fly.Playing = false
+ end
+})
+Tab:AddButton({
+ Name = "Включить звук Tails Tfly!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.tfly.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Остановить звук Tails Tfly!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.tfly.Playing = false
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук AIZ Rock Break!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.Break.Playing = true
+ end
+})
+Tab:AddLabel("Остальные Звуки")
+Tab:AddButton({
+ Name = "Произвести звук Jump!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.jump.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Sonic.EXE Laugh!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.SonicExeLaugh.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Sonic.EXE Exit!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.die2.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Bumper!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.Bumper.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Ring!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.ring.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Died On Spikes!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.spike_hit.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Losed Ring!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.RingLose.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Blue Sphere Eat!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.Sphere.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук House Zone Moving Face!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.face_move.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Glass Bumper Crash!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.crash.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Dead Sound!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.oof.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Eggman Jump!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.jump3.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Point!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.point.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Warp 2!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.warp.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Spring!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.spring.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Break!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.break2.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Electric Shield!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.lshield.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук получения Electric Shield!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.lshieldget.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук Flame Shield!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.fshield.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Произвести звук получения Flame Shield!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.fshieldget.Playing = true
+ end
+})
+Tab:AddLabel("Удалить объекты")
+Tab:AddButton({
+ Name = "Удалить все объекты (Кроме игрока)!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+         game:GetService("ReplicatedStorage").Objects.Amy.Sprite.SpriteDirY:Clone().Parent = game.ReplicatedStorage.Objects.Ring.Sprite
+		for i,v in pairs(game.ReplicatedStorage.Objects:GetChildren()) do
+			if v.Name ~= "Sonic_S1" and v.Name ~= "PathSwapper" and v.Name ~= "PathSwapper2" and v.Name ~= "Ring_Spark" and v.Name ~= "Ring_Goal" and v.Name ~= "Ring_Bouncing" and v.Name ~= "Ring" and v.Name ~= "Sonic_S1_Rose" and v.Name ~= "Sonic_S2" and v.Name ~= "Sonic_S2_Ashura" and v.Name ~= "Sonic_S3" and v.Name ~= "Sonic_S3_Red" and v.Name ~= "Tails_S3" and v.Name ~= "Knuckles_S3" and v.Name ~= "Knuckles_S3_Blue" and v.Name ~= "Metal_Sonic" and v.Name ~= "Rouge_S1" and v.Name ~= "Dr_Robotnik" and v.Name ~= "Shadow_S3" and v.Name ~= "Sonic_SCD" and v.Name ~= "Sonic_SCD_Rose" and v.Name ~= "Super_Sonic" then
+				v:Destroy()
+			end
+		end
+	end,
+})
+Tab:AddButton({
+ Name = "Удалить Test Pushable Block!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Block_Pushable"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Удалить Test Collapsing Bridge!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Collapsing_Bridge"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Удалить Test Bridge 8 Logs!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Bridge_08"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Удалить Test Bridge 12 Logs!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Bridge_12"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Удалить Test Platform Collapse!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Platform_Collapse"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Удалить Test Staircase!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Staircase"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Удалить Test Staircase 2!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Staircase_Rotating_1004"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Удалить Test Staircase 4!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Staircase_Rotating_1234"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Удалить Test Platform Bumper Up-Down 256px!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Platform_Bumper_R256"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Удалить Test Platform Bumper Up-Down 128px!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Platform_Bumper_D128"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Удалить Test Platform Bumper Right-Left 128px!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Platform_Bumper_R128"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Удалить Test Breakable Wall Middle!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Breakable_Wall_Middle"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Удалить Test Platform!",
+ Callback = function()
+ game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
+ game:GetService("ReplicatedStorage").Objects["TZ__Platform"]:Destroy()
+ end
+})
+local Tab = Window:MakeTab({
+ Name = "Настроить уровень",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddLabel("Скрытые Функции")
+Tab:AddButton({
+ Name = "Включить Water Transfare",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/HBSNX/main/Xjwxn"))()
+ end
+})
+Tab:AddButton({
+ Name = "Выключить Water Transfare",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Wixbe/main/Eienr"))()
+ end
+})
+Tab:AddButton({
+ Name = "Включить Rise Speed",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Wixbe/main/Sjwjze"))()
+ end
+})
+Tab:AddButton({
+ Name = "Выключить Rise Speed Off",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Wixbe/main/Iek2nd"))()
+ end
+})
+Tab:AddLabel("Скрытые объекты")
+Tab:AddParagraph("Как использовать объекты", "Сначала нажмите на кнопку, на которую вы хотите вставить объект, затем вытащите кольцо из списка объектов, наденьте его, затем нажмите на кнопку в игре (Сохранить и выйти), затем выберите уровень, на котором вы поместили кольцо, и оно станет объектом, на который вы нажали")
+Tab:AddParagraph("Объекты Мебели")
+Tab:AddButton({
+ Name = "Поставить Big Bookshelf!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 224
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Small Bookshelf!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 223
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Chao Fruit!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 168
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Picture Frame 1!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 169
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Picture Frame 2!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 170
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Cake Slice!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 167
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Long Table!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 166
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Couch!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 163
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Armchair!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 164
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Table!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 165
+ end 
+})
+Tab:AddParagraph("Невышедшые/Удаленные Объекты")
+Tab:AddButton({
+ Name = "Поставить Big Angel Island Breakable Rock!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 145
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Medium Angel Island Breakable Rock!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 144
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Small Angel Island Breakable Rock (Прыгни чтобы сломать)!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 146
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Small Angel Island Breakable Rock (Сделай SpinDash чтобы сломать)!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 143
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Solid Wall 4!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 373
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Solid Wall 5!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 374
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Triple Rotating Bumpers!(Ломает уровень)",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 514
+ end 
+})
+Tab:AddParagraph("Объекты из Old Test!")
+Tab:AddButton({
+ Name = "Поставить Conveyor Belt",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 373
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить CD Bumper!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 33
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Block!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 181
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Breakable Wall!",
+ Callback = function()
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 192
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Rotating Staircase!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 232
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Swinging Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 123
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 115
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Bridge!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 120
+ end 
+})
+Tab:AddParagraph("Объекты из Test!")
+Tab:AddButton({
+ Name = "Поставить Block!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 400
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Breakable Wall!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 401
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Collapsing Bridge!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 404
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Bumper Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 405
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Breakable Block!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 384
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Flipper!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 322
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Glass Bumper!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 385
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Fire Wall!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 386
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 394
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Swinging Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 391
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Rotating Staircase!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 411
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Bridge!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 496
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Interactable Block!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 530
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить S2 Bumper!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 413
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Bumper Token!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 518
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Ballon!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 34
+ end 
+})
+Tab:AddParagraph("Объекты из Green Hill!")
+Tab:AddButton({
+ Name = "Поставить Collapsing Ledge!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 379
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Palmatree Panic Ghost Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 372
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Bridge!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 203
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Bridge Support!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 244
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Vertical Moving Tall Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 233
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Breakable Wall!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 189
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 202
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Swinging Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 293
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Non-Solid Wall!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 186
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Solid Wall!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 183
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Rock!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 182
+ end 
+})
+Tab:AddParagraph("Объекты из Marble!")
+Tab:AddButton({
+ Name = "Поставить Block!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 199
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Falling Block Type A!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 211
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Falling Block Type B!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 212
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Bobbing Block!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 213
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 200
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Swinging Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 263
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Moving Pillar!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 208
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Breakable Block!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 230
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Fire Wall!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 248
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Fireball Spawner!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 257
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Interactable Block!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 529
+ end 
+})
+Tab:AddParagraph("Объекты из Spring Yard!")
+Tab:AddButton({
+ Name = "Поставить S1 Bumper!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 256
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Block!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 245
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 286
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Moving Square Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 246
+ end 
+})
+Tab:AddParagraph("Объекты из Labyrinth!")
+Tab:AddButton({
+ Name = "Поставить Block!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 221
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Sponge Block!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 524
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 525
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Spear!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 527
+ end 
+})
+Tab:AddParagraph("Объекты из Star Light!")
+Tab:AddButton({
+ Name = "Поставить Collapsing Bridge!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 310
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Rotating Platforms!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 311
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Descending Staircase!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 312
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Fire Wall!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 314
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Swinging Spiked Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 320
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Breakable Wall!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 321
+ end 
+})
+Tab:AddParagraph("Объекты из Emerald Hill!")
+Tab:AddButton({
+ Name = "Поставить Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 217
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Bridge Support!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 532
+ end 
+})
+Tab:AddButton({
+ Name = "Поставить Bridge!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 214
+ end 
+})
+local Tab = Window:MakeTab({
+ Name = "Вырезанная Музыка",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddParagraph("Как слушать обрезанную музыку", "Сначала зайдите в Level Creator и нажмите на красную музыку на верхней панели, нажмите на кнопки в скрипте, и песни вставятся автоматически!")
+Tab:AddLabel("House Zone")
+Tab:AddButton({
+ Name = "House Music 1",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1551374958"
+ end 
+})
+Tab:AddButton({
+ Name = "House Music 2",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "150110636"
+ end 
+})
+Tab:AddButton({
+ Name = "House Music 3",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1551374073"
+ end 
+})
+Tab:AddButton({
+ Name = "House Music 4",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1551374625"
+ end 
+})
+Tab:AddButton({
+ Name = "House Music 5",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1553436267"
+ end 
+})
+Tab:AddLabel("Dr.Robotnik's Mean Bean Machine")
+Tab:AddButton({
+ Name = "Multiplayer Versus",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "242610832"
+ end 
+})
+Tab:AddButton({
+ Name = "Exercise Mode",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "284747270"
+ end 
+})
+Tab:AddButton({
+ Name = "Stages 1-4",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "284750073"
+ end 
+})
+Tab:AddLabel("Final Fantasy X")
+Tab:AddButton({
+ Name = "Battle",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "287414770"
+ end 
+})
+Tab:AddLabel("A Dash For Freedom")
+Tab:AddButton({
+ Name = "A Dash For Freedom!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "2413255944"
+ end 
+})
+Tab:AddLabel("Undertale")
+Tab:AddButton({
+ Name = "Asgore!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "360710888"
+ end 
+})
+Tab:AddButton({
+ Name = "Finale!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "321055906"
+ end 
+})
+Tab:AddButton({
+ Name = "Gaster's Theme!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "582435167"
+ end 
+})
+Tab:AddButton({
+ Name = "Ghost Fight!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "473070704"
+ end 
+})
+Tab:AddButton({
+ Name = "Hopes and Dreams!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "382688202"
+ end 
+})
+Tab:AddButton({
+ Name = "Run!!!!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "461923735"
+ end 
+})
+Tab:AddButton({
+ Name = "Dog Song!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "429383704"
+ end 
+})
+Tab:AddLabel("Sonic The Hedgehog 1")
+Tab:AddButton({
+ Name = "Invincibility!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7456593376"
+ end 
+})
+Tab:AddButton({
+ Name = "Act Clear!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "314059232"
+ end 
+})
+Tab:AddButton({
+ Name = "Title Screen!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "347479590"
+ end 
+})
+Tab:AddLabel("Sonic The Hedgehog 2")
+Tab:AddButton({
+ Name = "Hidden Palace Zone (Intro)!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "429388470"
+ end 
+})
+Tab:AddButton({
+ Name = "Invincibility!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7456628353"
+ end 
+})
+Tab:AddLabel("Sonic & Knuckles")
+Tab:AddButton({
+ Name = "Invincibility!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7456394738"
+ end 
+})
+Tab:AddLabel("Sonic 3 & Knuckles")
+Tab:AddButton({
+ Name = "Drown!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "314059552"
+ end 
+})
+Tab:AddButton({
+ Name = "Emerald!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "304801042"
+ end 
+})
+Tab:AddButton({
+ Name = "Act Cleared!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "295636697"
+ end 
+})
+Tab:AddButton({
+ Name = "Invincibility!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7456630275"
+ end 
+})
+Tab:AddLabel("Sonic The Hedgehog CD")
+Tab:AddButton({
+ Name = "Game Over (US)!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "302428675"
+ end 
+})
+Tab:AddButton({
+ Name = "Speed Up!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7354973962"
+ end 
+})
+Tab:AddButton({
+ Name = "Super Sneakers!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7354988616"
+ end 
+})
+Tab:AddButton({
+ Name = "Zone Clear!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7423170639"
+ end 
+})
+Tab:AddButton({
+ Name = "Stage Clear!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7423204753"
+ end 
+})
+Tab:AddButton({
+ Name = "Invincible!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7471698482"
+ end 
+})
+Tab:AddButton({
+ Name = "Invincibility!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7471720264"
+ end 
+})
+Tab:AddLabel("Музыка из CSS")
+Tab:AddButton({
+ Name = "Title Screen!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "313139233"
+ end 
+})
+Tab:AddButton({
+ Name = "Build Theme!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "3524195336"
+ end 
+})
+Tab:AddButton({
+ Name = "Main Menu!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "4623689274"
+ end 
+})
+Tab:AddLabel("Rapina Bros")
+Tab:AddButton({
+ Name = "Reach To The Top!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "2544859859"
+ end 
+})
+Tab:AddLabel("Xinon")
+Tab:AddButton({
+ Name = "Heart Warming Story!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "291899990"
+ end 
+})
+Tab:AddLabel("Kitsune 2")
+Tab:AddButton({
+ Name = "Goodnight (Ducktales)!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "230440993"
+ end 
+})
+Tab:AddButton({
+ Name = "Rainbow Tylenol!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "318790343"
+ end 
+})
+Tab:AddLabel("Knuckle Joe")
+Tab:AddButton({
+ Name = "The Times We Had!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "291053059"
+ end 
+})
+Tab:AddLabel("TOREINA")
+Tab:AddButton({
+ Name = "Pulse Fighter!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "298773973"
+ end 
+})
+Tab:AddLabel("OMORI")
+Tab:AddButton({
+ Name = "Three Bar Logos!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "11196728830"
+ end 
+})
+Tab:AddLabel("Secret Base")
+Tab:AddButton({
+ Name = "Tanuki Remix? What",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "324431321"
+ end 
+})
+Tab:AddLabel("Tag Underground")
+Tab:AddButton({
+ Name = "Posseission!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "360710810"
+ end 
+})
+Tab:AddLabel("Tudd")
+Tab:AddButton({
+ Name = "Ruby Rampage Zone!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1557595099"
+ end 
+})
+Tab:AddLabel("Sonic R")
+Tab:AddButton({
+ Name = "Livin' In The City (Radical City)!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "508029551"
+ end 
+})
+Tab:AddButton({
+ Name = "Super Sonic Racing!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "4584143727"
+ end 
+})
+Tab:AddLabel("Final Fantasy X-2")
+Tab:AddButton({
+ Name = "Eternity!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "397610035"
+ end 
+})
+Tab:AddLabel("Anotsu")
+Tab:AddButton({
+ Name = "Man On The Run!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "332517296"
+ end 
+})
+Tab:AddLabel("ETIA")
+Tab:AddButton({
+ Name = "Tsugaru Rainbow!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "2885366262"
+ end 
+})
+Tab:AddLabel("Cittan")
+Tab:AddButton({
+ Name = "Little Wish!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "500763290"
+ end 
+})
+Tab:AddLabel("Kyary Pamyu Pamyu")
+Tab:AddButton({
+ Name = "Candy Candy!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "502997918"
+ end 
+})
+Tab:AddParagraph("Внимание!","Если хотите больше песен здесь, перейдите в раздел (Каналы)")
+local Tab = Window:MakeTab({
+ Name = "OP Функции",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddLabel("OP Функции")
+Tab:AddButton({
+ Name = "Пройди зону нажатием!",
+ Callback = function()
+ local FastBeat = game:GetService("ReplicatedStorage").Remotes.EndGame
+ FastBeat:InvokeServer(BeatLevelInst)
+ game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game"):Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Пройди этап нажатием!",
+ Callback = function()
+ local A_1 = true
+ local A_2 = 64
+ local Event = game:GetService("ReplicatedStorage").Remotes.LeaveStage
+ Event:FireServer(A_1, A_2)
+ local A_1 = "Stages3"
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPublishedCreations
+ Event:InvokeServer(A_1)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ game:GetService("Players").LocalPlayer.PlayerGui.S3SpecialStage:Destroy()
+ end
+})
+Tab:AddLabel("Превратиться в персонажа")
+Tab:AddParagraph("Как стать персонажем-администратором", "Чтобы это сделать, просто нажмите на любую кнопку и перейдите на ЛЮБОЙ уровень. И вы станете тем персонажем, на которого вы сейчас нажали")
+Tab:AddButton({
+ Name = "Быть Baldi",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Baldi"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Sonic EXE",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_EXE"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Orange Mushroom",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Mushroom_Orange"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Sonic Tiny",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_Tiny"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Sonic_S1",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_S1"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Sonic_SCD",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_SCD"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Sonic_S2",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_S2"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Sonic_S3",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_S3"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Tails_S3",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Tails_S3"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Knuckles_S3",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Knuckles_S3"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Amy",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Amy"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Metal_Sonic",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Metal_Sonic"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Rouge_S1",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Rouge_S1"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Super_Sonic",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Super_Sonic"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Dr_Robotnik",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Dr_Robotnik"
+ end 
+})
+Tab:AddButton({
+ Name = "Быть Shadow_S3",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Shadow_S3"
+ end 
+})
+local Tab = Window:MakeTab({
+ Name = "Создатели",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddParagraph("Огромное спасибо Tema_Suhar за скрипты!"," ")
+Tab:AddParagraph("Скриптеры","Kirill228 и Tema_Suhar")
+Tab:AddParagraph("Название UI этого скрипта","Astereo UI")
+local Tab = Window:MakeTab({
+ Name = "Hot-Scripts",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddButton({
+ Name = "Открыть Dex Explorer V2",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.lshieldget.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/dex2.0", true))()
+ end 
+})
+Tab:AddButton({
+ Name = "Открыть Remote Spy",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.lshieldget.Playing = true
+ loadstring(game:HttpGet("https://pastebin.com/raw/bCghX33W", true))()
+ end 
+})
+Tab:AddButton({
+ Name = "Открыть Simple Spy",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.lshieldget.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
+ end 
+})
+Tab:AddButton({
+ Name = "Открыть Infinite Yield",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.lshieldget.Playing = true
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+ end 
+})
+local Tab = Window:MakeTab({
+ Name = "Настройки",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddButton({
+ Name = "Выбрать язык",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Dev/main/CSS", true))()
+ OrionLib:Destroy()
+ end 
+})
+Tab:AddParagraph("Выберите тему окна!", " ")
+Tab:AddButton({
+ Name = "Wave Тема",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Dev/main/CSS", true))()
+ OrionLib:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Ryzen Тема",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Dev/main/CSS", true))()
+ OrionLib:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Dev Тема",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Dev/main/CSS", true))()
+ OrionLib:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Red Тема",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Dev/main/CSS", true))()
+ OrionLib:Destroy()
+ end 
+})
+Tab:AddButton({
+ Name = "Pink тема",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Dev/main/CSS", true))()
+ OrionLib:Destroy()
+ end 
+})
+local Tab = Window:MakeTab({
+ Name = "Каналы",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddParagraph("Следите за нашими каналами, чтобы быть в курсе обновлений!", " ")
+Tab:AddButton({
+ Name = "Получить ссылку на Discord Server!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ setclipboard(tostring("https://discord.gg/yUBtS45CNt"))
+ end 
+})
+Tab:AddButton({
+ Name = "Получить ссылку на Discord Server 2!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ setclipboard(tostring("https://discord.gg/hy6xHG9eXD"))
+ end 
+})
+Tab:AddButton({
+ Name = "Получить ссылку на YouTube Channel!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ setclipboard(tostring("https://www.youtube.com/@CSS_Exploits"))
+ end 
+})
