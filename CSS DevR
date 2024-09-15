@@ -2920,7 +2920,7 @@ Tab:AddButton({
  Name = "Wave Тема",
  Callback = function()
  game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Dev/main/CSS", true))()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20WaveR", true))()
  OrionLib:Destroy()
  end 
 })
@@ -2928,15 +2928,7 @@ Tab:AddButton({
  Name = "Ryzen Тема",
  Callback = function()
  game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Dev/main/CSS", true))()
- OrionLib:Destroy()
- end 
-})
-Tab:AddButton({
- Name = "Dev Тема",
- Callback = function()
- game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Dev/main/CSS", true))()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20R", true))()
  OrionLib:Destroy()
  end 
 })
@@ -2944,7 +2936,7 @@ Tab:AddButton({
  Name = "Red Тема",
  Callback = function()
  game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Dev/main/CSS", true))()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20RedR", true))()
  OrionLib:Destroy()
  end 
 })
@@ -2952,7 +2944,7 @@ Tab:AddButton({
  Name = "Pink тема",
  Callback = function()
  game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Dev/main/CSS", true))()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20PinkR", true))()
  OrionLib:Destroy()
  end 
 })
