@@ -1151,7 +1151,7 @@ Tab:AddDropdown({
  print(SlotLevelID)
  end 
 })
-Tab:AddParagraph("What is ID Levels i should select?","1 - Old Test, 2 - Green Hill, 3 - Marble, 4 - Labyrinth, 5 - Emerald Hill, 6 - Metropolis, 7 - Spring Yard, 8 - Star Light, 9 - New Test")
+Tab:AddParagraph("Какие уровни ID мне следует выбрать??","1 - Old Test, 2 - Green Hill, 3 - Marble, 4 - Labyrinth, 5 - Emerald Hill, 6 - Metropolis, 7 - Spring Yard, 8 - Star Light, 9 - New Test")
 Tab:AddDropdown({
  Name = "Выберите ID уровня",
  Default = "1",
