@@ -2928,47 +2928,6 @@ Tab:AddButton({
  OrionLib:Destroy()
  end 
 })
-Tab:AddParagraph("Choose Window Theme!", " ")
-Tab:AddButton({
- Name = "Wave Theme",
- Callback = function()
- game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20Wave", true))()
- OrionLib:Destroy()
- end 
-})
-Tab:AddButton({
- Name = "Ryzen Theme",
- Callback = function()
- game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/refs/heads/main/CSS%20Orig", true))()
- OrionLib:Destroy()
- end 
-})
-Tab:AddButton({
- Name = "Dev Theme",
- Callback = function()
- game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20Dev", true))()
- OrionLib:Destroy()
- end 
-})
-Tab:AddButton({
- Name = "Red Theme",
- Callback = function()
- game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20Red", true))()
- OrionLib:Destroy()
- end 
-})
-Tab:AddButton({
- Name = "Pink Theme",
- Callback = function()
- game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20Pink", true))()
- OrionLib:Destroy()
- end 
-})
 local Tab = Window:MakeTab({
  Name = "Channels",
  Icon = "rbxassetid://4483345998",
