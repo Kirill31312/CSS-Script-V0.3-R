@@ -1,5 +1,5 @@
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/main/Astereo%20UI%20Dev"))()
-local Window = OrionLib:MakeWindow({Name = "🎈Classic Sonic Simulator V12 Script Revolution V1🎈", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/refs/heads/main/Astereo%20UI%20Dev"))()
+local Window = OrionLib:MakeWindow({Name = "🎃Classic Sonic Simulator V12 Script Reload VH🎃", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.lshieldget.Playing = true
 local SlotID = 1
 local LevelCreateID = 1
@@ -24,8 +24,8 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 OrionLib:MakeNotification({
- Name = "🎈CSS Script Revolution V1🎈!",
- Content = "Добавлена смена языка и Настройки!",
+ Name = "🎃CSS Script Reload VH🎃!",
+ Content = "Добавлена Новая тема и Музыка!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
@@ -2717,6 +2717,19 @@ Tab:AddButton({
  game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "502997918"
  end 
 })
+Tab:AddLabel("Хэллоуин")
+Tab:AddButton({
+ Name = "Dark Magic!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1837467285"
+ end 
+})
+Tab:AddButton({
+ Name = "Halloween Horror Waltz!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1836009626"
+ end 
+})
 Tab:AddParagraph("Внимание!","Если хотите больше песен здесь, перейдите в раздел (Каналы)")
 local Tab = Window:MakeTab({
  Name = "OP Функции",
@@ -2912,39 +2925,6 @@ Tab:AddButton({
  Callback = function()
  game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
  loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20Script%20R%20V0.3", true))()
- OrionLib:Destroy()
- end 
-})
-Tab:AddParagraph("Выберите тему окна!", " ")
-Tab:AddButton({
- Name = "Wave Тема",
- Callback = function()
- game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20WaveR", true))()
- OrionLib:Destroy()
- end 
-})
-Tab:AddButton({
- Name = "Ryzen Тема",
- Callback = function()
- game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20R", true))()
- OrionLib:Destroy()
- end 
-})
-Tab:AddButton({
- Name = "Red Тема",
- Callback = function()
- game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20RedR", true))()
- OrionLib:Destroy()
- end 
-})
-Tab:AddButton({
- Name = "Pink тема",
- Callback = function()
- game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/main/CSS%20PinkR", true))()
  OrionLib:Destroy()
  end 
 })
