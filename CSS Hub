@@ -8,14 +8,14 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
  Name = "CSS V12",
  Callback = function()
- loadstring(game:HttpGet('https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/refs/heads/main/CSS%20Theme'))()
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/refs/heads/main/CSS%20Script%20R%20V0.3'))()
  OrionLib:Destroy() 
  end 
 })
 Tab:AddButton({
  Name = "CSS V13",
  Callback = function()
- loadstring(game:HttpGet('https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/refs/heads/main/CSS%20ThemeR'))()
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/refs/heads/main/CSS%2013'))()
  OrionLib:Destroy()
  end 
 })
