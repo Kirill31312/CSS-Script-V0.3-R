@@ -1,0 +1,21 @@
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/main/Astereo%20UI%20Dev"))()
+local Window = OrionLib:MakeWindow({Name = "Select Language!/Выберите Язык!", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+ Name = "Languages",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddButton({
+ Name = "English",
+ Callback = function()
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/refs/heads/main/CSS%20Theme'))()
+ OrionLib:Destroy() 
+ end 
+})
+Tab:AddButton({
+ Name = "Русский",
+ Callback = function()
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/refs/heads/main/CSS%20ThemeR'))()
+ OrionLib:Destroy()
+ end 
+})
