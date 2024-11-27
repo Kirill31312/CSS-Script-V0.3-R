@@ -2346,11 +2346,6 @@ Tab:AddButton({
 })
 Tab:AddParagraph("Внимание!","Если хотите больше песен здесь, перейдите в раздел (Каналы)")
 local Tab = Window:MakeTab({
- Name = "OP Функции",
- Icon = "rbxassetid://4483345998",
- PremiumOnly = false
-})
-local Tab = Window:MakeTab({
  Name = "Создатели",
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
