@@ -1,21 +1,41 @@
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/main/Astereo%20UI%20Dev"))()
-local Window = OrionLib:MakeWindow({Name = "Select Language!/Выберите Язык!", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
-local Tab = Window:MakeTab({
- Name = "Languages",
- Icon = "rbxassetid://4483345998",
- PremiumOnly = false
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
+local Window = Fluent:CreateWindow({
+    Title = "CSS GENIE",
+    SubTitle = "",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 260),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
-Tab:AddButton({
- Name = "English",
+
+--Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
+local Tabs = {
+    Transition = Window:AddTab({ Title = "Transition", Icon = "info" })
+}
+
+do
+
+Tabs.Transition:AddParagraph({
+        Title = "This version of the script is outdated",
+		Content = "Copy this updated version"
+    })
+Tabs.Transition:AddButton({
+ Title = "Open CSS GENIE!",
  Callback = function()
- loadstring(game:HttpGet('https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/refs/heads/main/CSS%20Theme'))()
- OrionLib:Destroy() 
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/CSS-GENIE/refs/heads/main/CSS%20GENIE%20ENG", true))()
+ Fluent:Destroy()
  end 
 })
-Tab:AddButton({
- Name = "Русский",
+Tabs.Transition:AddButton({
+ Title = "Get Link On Discord Server!",
  Callback = function()
- loadstring(game:HttpGet('https://raw.githubusercontent.com/Kirill31312/CSS-Script-V0.3-R/refs/heads/main/CSS%20ThemeR'))()
- OrionLib:Destroy()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ setclipboard(tostring("https://discord.gg/CfSKpgUM"))
  end 
 })
+end
